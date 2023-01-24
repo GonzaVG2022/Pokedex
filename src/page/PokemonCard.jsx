@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import pokeball from '../assets/gifs/pokeball.gif'
 
-const PokedexDetails = () => {
+const PokemonCard = () => {
   const [pokemon, setPokemon] = useState({})
   const [add, setAdd] = useState(false)
 
@@ -165,4 +165,4 @@ const PokedexDetails = () => {
   )
 }
 
-export default PokedexDetails
+export default PokemonCard

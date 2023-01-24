@@ -6,7 +6,7 @@ import inicio from '../assets/image/inicio.jpeg'
 
 // import ash from '../video/ash.mp4'
 
-const InputName = () => {
+const Home = () => {
   // const [userName, setUserName] = useState('')
   
     const navigate = useNavigate()
@@ -37,4 +37,4 @@ const InputName = () => {
   )
 }
 
-export default InputName
+export default Home
