@@ -13,7 +13,6 @@ function App() {
   
   return (
     <div >
-      {/* <ThemeDark /> */}
       <HashRouter >
         <Routes>
           <Route path='/' element={<Home />} />
