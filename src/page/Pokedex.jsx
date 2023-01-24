@@ -46,16 +46,15 @@ const Pokedex = ({ isVisible, setIsVisible }) => {
   }
   console.log(pokemon)
   return (
-    <div >
-      <div
-        
-        onClick={() => setIsVisible(false)}
+    <div  >
+      <div  
+      onClick={() => setIsVisible(false)}
       ></div>
-      <div >
-        <h1 >Welcome ! {userName}</h1>
-        <p >to the </p>
-        <p > POKEDEX</p>
-      </div>
+      <div className='titulo'>
+        <h1 >Welcome {userName}</h1>
+        <h3 >to the </h3>
+        <h2 > POKEDEX</h2>
+      
       <input
         
         list='pokemon'
@@ -78,7 +77,7 @@ const Pokedex = ({ isVisible, setIsVisible }) => {
         shearch
       </button>
       <select
-        
+        className='select'
         onChange={filterType}
         name=''
         id='select'
@@ -101,7 +100,7 @@ const Pokedex = ({ isVisible, setIsVisible }) => {
 
       {/* cierra paginacion */}
       <section >
-        <ul >
+        <ul className='card__container'>
           {pokemonPagination.map((pokemon) => (
             <CharacterPokemon
               url={pokemon.url ? pokemon.url : pokemon.pokemon.url}
@@ -118,7 +117,7 @@ const Pokedex = ({ isVisible, setIsVisible }) => {
         array={array}
         totalPage={totalPage}
       />
-    </div>
+    </div></div>
   )
 }
 

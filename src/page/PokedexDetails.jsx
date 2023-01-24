@@ -23,9 +23,9 @@ const PokedexDetails = () => {
   //flex flex-col text-center justify-center items-center h-screen gap-6
 
   return (
-    <div>
+    <div className='container__ball'>
       {!add && (
-        <div >
+        <div className='pokeball'>
           <img
             onClick={() => setAdd(true)}
             src={pokeball}
@@ -43,17 +43,18 @@ const PokedexDetails = () => {
           ></div>
 
           <div>
-            <div >
-              {/* <img src={pokeball} alt='pokeball1' /> */}
+            <div className='pokemon__detail'>
+              <p >
+                {pokemon.name}
+              </p>
               <img
                 src={pokemon.sprites?.other.home?.front_default}
                 alt='poke'
               />
-              <h1 >
-                {pokemon.name}
-              </h1>
+            
             </div>
-            <div >
+            <div className='detail__container'>
+            <div className='detail'>
               <div >
                 <h2 >Weight</h2>
                 <p >
@@ -97,10 +98,10 @@ const PokedexDetails = () => {
                 </div>
               </div>
             </div>
-            <div >
+            <div className='detail'>
               <h2 >Stats</h2>
-            </div>
-            <div >
+           
+            
               <label htmlFor='HP'>HP</label>
               <progress
                 
@@ -140,19 +141,16 @@ const PokedexDetails = () => {
               </progress>
               <p >{pokemon.stats?.[5].base_stat}/150</p>
             </div>
+            </div>
           </div>
 
           {/* inicia el despliege */}
           <div >
-            <input type='checkbox'  />
-            <div >
-              Movements
-            </div>
-            <div >
+            <div className='movements'>
+             <h2>Movements</h2> 
               {pokemon.moves?.map((poke) => (
                 <div key={poke.move.name} >
                   <button
-                    
                     key={poke.move.name}
                   >
                     {poke.move.name}
